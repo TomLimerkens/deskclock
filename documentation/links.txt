@@ -8,3 +8,6 @@ https://www.waveshare.com/rp2040-lcd-1.28.htm
 CircuitPython:
 https://circuitpython.org/board/waveshare_rp2040_lcd_1_28/
 
+Libraries:
+v8 is used
+https://circuitpython.org/libraries
