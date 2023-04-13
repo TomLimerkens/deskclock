@@ -30,11 +30,10 @@ display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=
 display = gc9a01.GC9A01(display_bus, width=240, height=240, backlight_pin=tft_bl)
 
 #loadfrom disk
-bitmap = displayio.OnDiskBitmap("/star60.bmp")
-bitmapred = displayio.OnDiskBitmap("/starred16b60.bmp")
-bitmapgreen = displayio.OnDiskBitmap("/stargreen60.bmp")
+bitmap = displayio.OnDiskBitmap("/star.bmp")
+bitmapred = displayio.OnDiskBitmap("/starred16b.bmp")
+bitmapgreen = displayio.OnDiskBitmap("/stargreen16b.bmp")
 
-#create tilegrid
 #create tilegrid
 tile_grid = displayio.TileGrid(bitmap, pixel_shader=bitmap.pixel_shader)
 
@@ -45,7 +44,6 @@ print("** set Display context")
 #Set context
 group = displayio.Group()
 group.append(tile_grid)
-
 
 groupred = displayio.Group()
 groupred.append(tile_red)
